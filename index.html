@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="javascript.js"></script>
+    <script src="productos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Práctica 11: Librerías</title>
+</head>
+<body>
+    <h1>Práctica de Librerías</h1>
+
+    <p><strong>Formulario de Registro</strong></p>
+    <!-- Validación de formulario: Crea un formulario de registro con campos como nombre, correo electrónico y contraseña. Utiliza SweetAlert2 para mostrar mensajes de error si algún campo está vacío o si el correo electrónico no tiene un formato válido. -->
+    <div>Ingresa un nombre de usuario: <input type="text" class="usuario" placeholder= "johnwick" size="30"></div>
+    <div>Ingresa un correo electrónico: <input type="email" class="email" placeholder= "john.wick@gmail.com" size="30"></div>
+    <div>Ingresa una contraseña: <input type="password" class="contraseña" placeholder= "********" size="15"></div>
+    <button class="registrar">Registrar</button>
+
+    <p><strong>Eliminar elementos de un array</strong></p>
+    <!-- Confirmación de eliminación: Crea una lista de elementos y añade un botón de eliminación junto a cada uno. Al hacer clic en el botón, muestra un SweetAlert2 con un mensaje de confirmación para asegurarte de que el usuario desea eliminar el elemento seleccionado. -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>FABRICANTE</th>
+                <th>MARCA</th>
+                <th>MODELO</th>
+                <th>MEMORIA</th>
+                <th>PRECIO</th>
+            </tr>
+        </thead>
+        <tbody class="body">
+            
+        </tbody>
+    </table>
+
+
+    
+    <!-- Notificaciones de éxito: Después de que el usuario complete una acción exitosa, como enviar un formulario o realizar una compra, utiliza SweetAlert2 para mostrar una notificación de éxito con un mensaje personalizado y un ícono. -->
+
+    <!-- Confirmación de salida: Si el usuario intenta abandonar una página sin guardar cambios, muestra un SweetAlert2 con un mensaje de advertencia y opciones para guardar los cambios, descartarlos o cancelar la acción. -->
+
+    <!-- Mensajes de carga: Cuando se realiza una operación que lleva tiempo, como enviar un formulario o cargar datos desde un servidor, muestra un SweetAlert2 con un mensaje de carga y una animación para indicar al usuario que se está procesando la solicitud. -->
+</body>
+</html>
