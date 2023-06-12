@@ -1,3 +1,7 @@
+window.addEventListener("beforeunload", function(event) {
+  event.returnValue = "Se perderán los cambios no guardados. ¿Estás seguro de que deseas salir de la página?";
+});
+
 function clickEvent() {
   const registro = document.querySelector(".registrar");
   registro.addEventListener("click", () => {
