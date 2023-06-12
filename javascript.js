@@ -7,9 +7,9 @@ function clickEvent() {
   registro.addEventListener("click", () => {
     aceptarRegistro();
   });
-}
+} 
 
-function aceptarRegistro() {
+async function aceptarRegistro() {
   const usuario = document.querySelector(".usuario").value;
   const email = document.querySelector(".email").value;
   const password = document.querySelector(".contraseña").value;
@@ -21,11 +21,22 @@ function aceptarRegistro() {
   regExUser.test(usuario) &&
   regExEmail.test(email) &&
   regExPassword.test(password)
-    ? Swal.fire({
+    ? 
+    (await Swal.fire({
+      title: 'Estamos procesando tus datos...',
+      color: 'lightblue',
+      showConfirmButton: false,
+      imageUrl: '/images/blue-black-load.gif',
+      imageWidth: 400,
+      imageAlt: 'Custom image',
+      background: 'black',
+      timer: 3000
+    }),
+    Swal.fire({
         icon: "success",
         title: `Excelente, ${usuario}!`,
         text: "Tu registro se ha completado exitosamente!",
-      })
+      }))
     : !regExUser.test(usuario)
     ? Swal.fire({
         icon: "error",
